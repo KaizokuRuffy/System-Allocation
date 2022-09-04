@@ -25,12 +25,7 @@ export let userLogin = () => {
         } else if (comp_Id === "-1" || comp_Id === null) {
           if (beforeLogin(true)) {
             let CID = window.prompt("Please enter Computer Id");
-            if (CID !== sessionStorage.getItem("CID") && CID !== null) {
-              window.alert(
-                CID +
-                  " is not the system you are allocated to. Please enter again"
-              );
-            } else if (CID !== null) UserController.login(CID);
+            UserController.login(CID);
           } else {
             window.alert(
               "System already in use by " + localStorage.getItem(U.User.Id)
@@ -41,10 +36,7 @@ export let userLogin = () => {
           else window.alert("Cannot login to different system");
         }
       } else {
-        let view = {};
-        view.body = sessionStorage.getItem("Username");
-        view.status = 403;
-        UserController.View.login(view);
+        UserController.View.login(sessionStorage.getItem("Username"));
       }
     });
 };
@@ -81,8 +73,6 @@ export let firstTime = () => {
     U.gEBI(U.User.Email).addEventListener("keyup", () => {
       keypress = false;
       sessionStorage.removeItem(U.System.Id);
-      sessionStorage.removeItem("CID");
-      sessionStorage.removeItem(U.User.Id);
       sessionStorage.removeItem("Username");
       sessionStorage.removeItem("Available");
     });
@@ -92,15 +82,13 @@ export let firstTime = () => {
         keypress = true;
         UserController.firstLogin();
 
-        if (sessionStorage.getItem("CID") !== null)
-          window.alert(
-            "Your allocated system is " + sessionStorage.getItem("CID")
-          );
-        if (sessionStorage.getItem(U.User["Computer Id"]) !== "-1")
-          sessionStorage.setItem(
-            U.User["Computer Id"],
-            sessionStorage.getItem("CID")
-          );
+        window.alert(
+          "Your allocated system is " + sessionStorage.getItem("CID")
+        );
+        sessionStorage.setItem(
+          U.User["Computer Id"],
+          sessionStorage.getItem("CID")
+        );
         comp_Id = sessionStorage.getItem(U.System.Id);
       }
     });

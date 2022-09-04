@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>System Allocation</title>
+    <!-- src="http://127.0.0.1:8887/JavaScript/Event/index.js" -->
+    <script type="module" src="./JavaScript/Event/index.js"></script>
+    <style>
+      .box {
+        padding-bottom: 20px;
+      }
+      button {
+        height: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>System Allocation App</h1>
+    <form
+      action=""
+      style="
+        margin: auto;
+        border: 10px black;
+        height: fit-content;
+        width: fit-content;
+      "
+    >
+      <!-- padding-left: 40px -->
+      <h2 align="center" style="font-weight: 550">Login</h2>
+
+      <table align="center">
+        <thead>
+          <tr>
+            <th class="admin">
+              <div align="center">
+                <h3 style="font: size 15px; font-weight: 150">Admin</h3>
+              </div>
+            </th>
+            <th class="employee">
+              <div align="center">
+                <h3
+                  style="font: size 15px; font-weight: 150; padding-left: 65px"
+                >
+                  Employee
+                </h3>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              id="admin"
+              style="padding-bottom: 55px; padding-right: 50px"
+              class="border"
+            >
+              <table>
+                <tr>
+                  <td class="box">Username :</td>
+                  <td class="box" style="padding-right: 30px">
+                    <input type="text" id="admin_Email" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="box">Password &nbsp;:</td>
+                  <td class="box" style="padding-right: 30px">
+                    <input type="password" id="admin_Password" />
+                  </td>
+                </tr>
+              </table>
+              <table id="button" style="position: fixed">
+                <tr style="width: 100px">
+                  <td
+                    style="padding-left: 115px; padding-bottom: 10px"
+                    style="padding-right: 30px"
+                  >
+                    <button id="adminLogin" type="button" style="width: 85px">
+                      Login
+                    </button>
+                  </td>
+                </tr>
+                <tr id="Register" style="width: 80px">
+                  <td style="padding-left: 115px">
+                    <div id="Register button"></div>
+                    <!-- <button type="button" id="Admin" style="width: 85px">
+                      Register
+                    </button> -->
+                  </td>
+                </tr>
+              </table>
+            </td>
+
+            <td id="employee" class="border" style="padding-bottom: 55px">
+              <table>
+                <tr>
+                  <td class="box">Username :</td>
+                  <td class="box"><input type="text" id="emp_Email" /></td>
+                </tr>
+                <tr>
+                  <td class="box">Password &nbsp;:</td>
+                  <td class="box">
+                    <input type="password" id="emp_Password" />
+                  </td>
+                </tr>
+              </table>
+              <table id="btn" style="position: fixed">
+                <tr style="width: 80px">
+                  <td id="uL" style="padding-left: 115px; padding-bottom: 10px">
+                    <button type="button" id="userLogin" style="width: 85px">
+                      Login
+                    </button>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script type="module" src="../JavaScript/Event/User.js"></script>
+
+    <style>
+      a {
+        font-size: x-large;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: lighter;
+        color: cadetblue;
+        text-underline-offset: 2px;
+        text-underline-position: below;
+        text-decoration-thickness: 2px;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      th {
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 10px;
+      }
+      th,
+      td {
+        padding: 10px 20px;
+        border: 1px solid #000;
+      }
+
+      #Links th {
+        padding-right: 50px;
+        padding-bottom: 10px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1
+      align="center"
+      style="
+        font: size 15px;
+        font-weight: 150;
+        padding-top: 20px;
+        padding-bottom: 25px;
+      "
+    >
+      Employee page
+    </h1>
+    <div style="position: absolute; top: 40px; right: 75px">
+      <button
+        id="userLogout"
+        type="button"
+        style="
+          width: 100px;
+          font-size: larger;
+          font-family: 'Times New Roman', Times, serif;
+        "
+      >
+        Logout
+      </button>
+    </div>
+
+    <div align="center">
+      <table id="Links">
+        <thead>
+          <tr>
+            <th><a id="getUser" href="javascript:;">Profile</a></th>
+            <th><a id="getAllSession" href="javascript:;">Session data</a></th>
+          </tr>
+        </thead>
+      </table>
+      <hr style="width: 800px" />
+    </div>
+    <div id="display"></div>
+  </body>
+</html>

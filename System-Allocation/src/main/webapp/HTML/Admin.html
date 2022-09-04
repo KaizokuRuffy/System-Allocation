@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="module" src="../JavaScript/Event/Admin.js"></script>
+    <style>
+      a {
+        font-size: x-large;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: lighter;
+        color: cadetblue;
+        text-underline-offset: 2px;
+        text-underline-position: below;
+        text-decoration-thickness: 2px;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      th,
+      td {
+        padding: 10px 20px;
+        border: 1px solid #000;
+      }
+      div[id="display session"] {
+        padding-top: 0px;
+      }
+
+      #Links th {
+        padding-right: 30px;
+        padding-bottom: 10px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1
+      align="center"
+      style="
+        font: size 15px;
+        font-weight: 150;
+        padding-top: 20px;
+        padding-bottom: 25px;
+      "
+    >
+      Admin page
+    </h1>
+    <div style="position: absolute; top: 40px; right: 75px">
+      <button
+        id="adminLogout"
+        type="button"
+        style="
+          width: 100px;
+          font-size: larger;
+          font-family: 'Times New Roman', Times, serif;
+        "
+      >
+        Logout
+      </button>
+    </div>
+
+    <div align="center">
+      <table id="Links">
+        <thead>
+          <tr>
+            <th>
+              <a href="javascript:;" id="getAdmin">Profile</a
+              >&nbsp;&nbsp;&nbsp;&nbsp;<button
+                type="button"
+                id="regAdmin"
+                style="font-size: 15px"
+              >
+                Add Admin
+              </button>
+            </th>
+            <th>
+              <a href="javascript:;" id="getAllUsers">Employee data</a
+              >&nbsp;&nbsp;&nbsp;&nbsp;<button
+                type="button"
+                id="regUser"
+                style="font-size: 15px"
+              >
+                Add Employee
+              </button>
+            </th>
+            <!--               
+            <th>
+              <a href="javascript:;" id="getAllocation">Allotment</a>
+            </th>
+            -->
+            <th>
+              <a href="javascript:;" id="getAllSystems">Resource data</a
+              >&nbsp;&nbsp;&nbsp;&nbsp;<button
+                id="regSystem"
+                type="button"
+                style="font-size: 15px"
+              >
+                Add System
+              </button>
+            </th>
+            <th><a href="javascript:;" id="getAllSession">Session data</a></th>
+          </tr>
+        </thead>
+      </table>
+      <hr style="width: 1080px" />
+    </div>
+    <div id="display"></div>
+  </body>
+</html>

@@ -92,7 +92,10 @@ export let firstTime = () => {
         keypress = true;
         UserController.firstLogin();
 
-        if (sessionStorage.getItem("CID") !== null)
+        if (
+          sessionStorage.getItem("CID") !== null &&
+          (comp_Id === "-1" || comp_Id === null)
+        )
           window.alert(
             "Your allocated system is " + sessionStorage.getItem("CID")
           );

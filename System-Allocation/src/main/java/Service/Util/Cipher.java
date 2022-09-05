@@ -20,7 +20,7 @@ public class Cipher {
 	private String ciphertext;
 	private String ID;
 	private String Name;
-	static private final String filePath = "\\Secret Key\\";
+	static private final String filePath = "System Allocation App\\Secret Key\\";
 
 
 	String keysetFilename;
